@@ -1,0 +1,108 @@
+# "Yamaha Grand Piano (Keyzone Classic)":
+-
+  type: chord
+  instruments:
+    - "Yamaha Grand Piano (Keyzone Classic)"
+    - "Synth Pad (LABS)"
+    # "Violin 1 (BBC Symphony Orchestra)": 
+-
+  type: chord
+  instruments:
+  - "Violin 1 (BBC Symphony Orchestra)"
+    # "SI-String Section":
+-
+  type: chord
+  instruments:
+  - "SI-String Section"
+  - Keyzone Piano (Keyzone Classic)
+  - Synth Pad (LABS)
+    # "SI-String Section",
+-
+  type: chord
+  instruments:
+  - "SI-String Section"
+  - Violins 1 (BBC Symphony Orchestra)
+  - Soft Piano (LABS)
+  - STRINGS Full Sustain (The Orchestra Elements)
+  - Synth Pad (LABS)
+
+    # "MODO BASS 2",
+- 
+  type: bass
+  instruments:
+  - "MODO BASS 2"
+  - "Synth Bass 1 (Vital)"
+    # "Vital",
+-
+  type: bass
+  instruments:
+  - "Synth Bass 1 (Vital)"
+    # "Keyzone Piano (Keyzone Classic)",
+-
+  type: bass
+  instruments:
+  - "Keyzone Piano (Keyzone Classic)"
+  - "Brass Pad (LABS)"
+    # "Sober Bell (The Bells)",
+-
+  type: bass
+  instruments:
+  - Sober Bell (The Bells)
+    # "Electric Piano - DI (LABS)",
+-
+  type: melody
+  instruments:
+  - "Electric Piano - DI (LABS)"
+    # "Soft Piano (LABS)",
+-
+  type: melody
+  instruments:
+  - "Soft Piano (LABS)"
+    # "Bells",
+-
+  type: bass
+  instruments:
+  - "Sober Bell (The Bells)"
+    # "Keyzone Piano",
+- 
+  type: melody
+  instruments:
+  - "Keyzone Piano (Keyzone Classic)"
+    # "Yamaha Grand Piano (Keyzone Classic)",
+-
+  type: melody
+  instruments:
+  - "Yamaha Grand Piano (Keyzone Classic)"
+  - "Sober Bell (The Bells)"
+
+-
+  type: melody
+  instruments:
+  - "Meimei Himari (Voicevox)"
+-
+  type: melody
+  instruments:
+  - "Nurse Robo - Type T (Voicevox)"
+-
+  type: melody2
+  instruments:
+  - "Meimei Himari (Voicevox)"
+-
+  type: melody2
+  instruments:
+  - "Nurse Robo - Type T (Voicevox)"
+- 
+  type: drum
+  instruments:
+  - "RVK-808"
+    # "Sitala",
+-
+  type: drum
+  instruments:
+  - "Odyssey Dubstep Kick 3, Odyssey Dubstep Snare 1 (Sitala)"
+    # "Artcore cymbal",
+- 
+  type: drum
+  hide: true
+  instruments:
+  - "SI-Drum Kit"
