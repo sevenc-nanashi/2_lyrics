@@ -6,4 +6,3 @@
 
 [LICENSE.md](LICENSE.md) を参照してください。
 
-

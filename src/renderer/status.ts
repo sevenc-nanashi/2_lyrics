@@ -1,5 +1,5 @@
 import type p5 from "p5";
-import { fg, height, songLength, width } from "../const.ts";
+import { fg, frameRate, height, songLength, width } from "../const.ts";
 import type { State } from "../state.ts";
 import {
 	getCurrentMeasure,
@@ -31,7 +31,11 @@ export const draw = (p: p5, g: Graphics, state: State) => {
 	);
 
 	g.background.text(
-		`Chord: ${chordsInPage.map(([, chord]) => chord).join(" -> ") || "-"}`,
+		`Chord: ${
+			page === 76
+				? "-"
+				: chordsInPage.map(([, chord]) => chord).join(" -> ") || "-"
+		}`,
 		32,
 		height - 32,
 	);
@@ -56,7 +60,11 @@ export const draw = (p: p5, g: Graphics, state: State) => {
 							.toString()
 							.padStart(2, "0")}.${milliseconds.toString().padStart(2, "0")}`
 			} / 02:06.60`,
-			`Frames: ${ended ? "---- " : state.currentFrame.toString().padStart(4)}`,
+			`Frames: ${
+				ended
+					? (songLength - 1) * frameRate + frameRate * 0.6
+					: state.currentFrame.toString().padStart(4)
+			}`,
 		].join(separator),
 		32,
 		32,
@@ -85,7 +93,7 @@ export const draw = (p: p5, g: Graphics, state: State) => {
 		[
 			`Part: ${part}`,
 			`Ticks: ${ended ? 405120 : tick.toString().padStart(6)} (tpqn: ${midi.header.ppq})`,
-			`Measure: ${ended ? 111 : measure.toFixed(2).padStart(6)}`,
+			`Measure: ${ended ? "111.00" : measure.toFixed(2).padStart(6)}`,
 		].join(separator),
 		width - 32,
 		32,

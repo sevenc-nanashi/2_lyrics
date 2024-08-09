@@ -1,16 +1,17 @@
 import type p5 from "p5";
-import { draw as drawCenter } from "./renderer/center.ts";
-import { draw as drawStatus } from "./renderer/status.ts";
 import type { State } from "./state.ts";
-import { frameRate } from "./const.ts";
+import { frameRate, songLength } from "./const.ts";
 import { getCurrentTick, midi } from "./midi.ts";
 import audio from "./assets/2_lyrics.mp3?url";
+import { P5Capture } from "p5.capture";
 
 export type Graphics = {
 	background: p5.Graphics;
 	lyrics: p5.Graphics;
 	pianoRoll: p5.Graphics;
 };
+
+let isRecording = false;
 
 const renderers = import.meta.glob("./renderer/*.ts", {
 	eager: true,
@@ -30,7 +31,7 @@ export const draw = import.meta.hmrify((p: p5, state: State) => {
 	if (!audioElement.paused && !state.playing) {
 		audioElement.pause();
 	}
-	if (audioElement.paused && state.playing) {
+	if (audioElement.paused && state.playing && !isRecording) {
 		audioElement.play();
 		audioElement.currentTime = state.currentFrame / frameRate;
 	}
@@ -83,7 +84,7 @@ export const draw = import.meta.hmrify((p: p5, state: State) => {
 			.notes.findLast(({ ticks }) => ticks <= currentTick);
 		if (lastCymbal) {
 			const diff =
-				(state.currentFrame / frameRate) -
+				state.currentFrame / frameRate -
 				midi.header.ticksToSeconds(lastCymbal.ticks);
 			if (diff < 2) {
 				p.push();
@@ -112,6 +113,19 @@ export const draw = import.meta.hmrify((p: p5, state: State) => {
 const keydown = (p: p5, state: State) => (e: KeyboardEvent) => {
 	if (e.key === " ") {
 		state.playing = !state.playing;
+	}
+	if (e.key === "s") {
+		if (state.currentFrame !== 0) {
+			location.reload();
+			return;
+		}
+		isRecording = true;
+		state.playing = true;
+		P5Capture.getInstance()?.start({
+			duration: (songLength + 5) * frameRate,
+			format: "mp4",
+			framerate: frameRate,
+		});
 	}
 	if (e.key === "r") {
 		state.currentFrame = 0;

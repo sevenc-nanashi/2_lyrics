@@ -56,7 +56,7 @@ export const draw = (p: p5, g: Graphics, state: State) => {
 		g.pianoRoll.textSize(32);
 		g.pianoRoll.text(
 			[
-				"Vocals: Meimei Himari, Nurse Robo - Type T (Voicevox)",
+				"Vocals: Meimei Himari, NurseRobo_TypeT (Voicevox)",
 				"Movie: Vite / p5.js / TypeScript | DAW: Reaper",
 			].join("\n"),
 			width / 2,

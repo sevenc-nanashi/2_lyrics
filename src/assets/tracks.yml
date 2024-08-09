@@ -82,7 +82,7 @@
 -
   type: melody
   instruments:
-  - "Nurse Robo - Type T (Voicevox)"
+  - "NurseRobo_TypeT (Voicevox)"
 -
   type: melody2
   instruments:
@@ -90,7 +90,7 @@
 -
   type: melody2
   instruments:
-  - "Nurse Robo - Type T (Voicevox)"
+  - "NurseRobo_TypeT (Voicevox)"
 - 
   type: drum
   instruments:
