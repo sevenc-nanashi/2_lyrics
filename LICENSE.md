@@ -9,6 +9,6 @@
 
 ## その他
 
-[MV](https://www.nicovideo.jp/watch/sm43942620)またはリポジトリへのリンクを掲載してくれると喜びます。
+[MV](https://www.nicovideo.jp/watch/sm43945652)またはリポジトリへのリンクを掲載してくれると喜びます。
 （例：ニコニコの親作品登録、YouTubeの概要欄）
 

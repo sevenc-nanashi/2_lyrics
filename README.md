@@ -1,6 +1,6 @@
 # 2>lyrics.txt
 
-2>lyrics.txt（[ニコニコ](https://www.nicovideo.jp/watch/sm43942620)）のソースコード。
+2>lyrics.txt（[ニコニコ](https://www.nicovideo.jp/watch/sm43945652)）のソースコード。
 
 ## ライセンス（利用規約）
 
